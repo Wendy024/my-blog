@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ContextProvider } from "./pages/context/Context";
 
-export const API_URL = "https://blogsite-apii.onrender.com/api/";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
