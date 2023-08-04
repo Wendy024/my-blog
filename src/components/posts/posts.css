@@ -1,0 +1,22 @@
+.posts{
+    margin-top: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+}
+@media(min-width: 300px) and (max-width: 599px) {
+    .posts{
+        
+        grid-template-columns: 1fr;
+    
+    }
+}
+@media(min-width: 600px) and (max-width: 899px) {
+    .posts{
+        
+        grid-template-columns: 1fr 1fr;
+    
+    }
+}
