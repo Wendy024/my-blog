@@ -12,7 +12,7 @@ export default function Settings() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
-  const PF = "https://blogsite-i1du.onrender.com/images";
+  const PF = "https://blogsite-i1du.onrender.com/api/images";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
