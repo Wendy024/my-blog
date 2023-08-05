@@ -6,7 +6,7 @@ import { Context } from "../../pages/context/Context";
 
 export default function Navbar() {
   const {user, dispatch} = useContext(Context);
-  const PF = "https://blogsite-apii.onrender.com/api/images";
+  const PF = "https://blogsite-apii.onrender.com/images";
 
   const handleLogout = () =>{
     dispatch({type: "LOGOUT"});
