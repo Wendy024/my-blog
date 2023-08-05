@@ -8,11 +8,11 @@ import { useLocation } from "react-router-dom";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
-  const url = "https://blogsite-apii.onrender.com"
+ 
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get(process.env.url + "/posts" + search);
+      const res = await axios.get("/posts" + search);
       setPosts(res.data);
     };
     fetchPosts();
