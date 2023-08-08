@@ -7,6 +7,11 @@ import { Context } from "../context/Context";
 
 export default function Login() {
 
+ 
+
+
+   axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
+
 
   const userRef = useRef();
   const passwordRef = useRef();

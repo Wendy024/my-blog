@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 
+axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
+
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
@@ -12,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" + search);
+      const res = await axios.get(`/posts${search}`);
       setPosts(res.data);
     };
     fetchPosts();

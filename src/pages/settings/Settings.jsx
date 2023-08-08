@@ -14,6 +14,8 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
   const PF = "https://blogsite-api-rnm3.onrender.com/images";
 
+  axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
@@ -34,7 +36,7 @@ export default function Settings() {
       } catch (err) {}
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(`/users/${user._id}`, {updatedUser});
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", playload: res.data });
     } catch (err) {

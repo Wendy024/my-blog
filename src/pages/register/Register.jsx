@@ -9,6 +9,8 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);

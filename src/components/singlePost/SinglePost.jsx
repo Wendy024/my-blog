@@ -14,10 +14,12 @@ export default function SinglePost() {
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")
   const [updateMode, setUpdateMode] = useState(false)
+  
+  axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
 
   useEffect(()=>{
     const getPost = async ()=>{
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get(`/posts${path}`);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const[cats, setCats] = useState([]);
+  axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
 
   useEffect(() =>{
     const getCats = async () =>

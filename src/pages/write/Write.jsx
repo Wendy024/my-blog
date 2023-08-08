@@ -10,6 +10,8 @@ export default function Write() {
   const [file,setFile] = useState(null);
   const {user} = useContext(Context);
 
+  axios.defaults.baseURL= "https://blogsite-api-rnm3.onrender.com";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = {
