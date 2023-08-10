@@ -34,7 +34,11 @@ export default function Settings() {
       } catch (err) {}
     }
     try {
+<<<<<<< HEAD
       const res = await axios.put("/users/" + user._id, updatedUser);
+=======
+      const res = await axios.put("/users/" + user._id, {updatedUser});
+>>>>>>> 03e8da244d29e7fbd909c817bff2cdaf67816dee
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", playload: res.data });
     } catch (err) {
